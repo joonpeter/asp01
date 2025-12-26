@@ -36,6 +36,8 @@ public class BoardController {
    * @return
    * @throws Exception
    */
+
+
   @ResponseBody
   @GetMapping(value="/list")
   public HashMap<String, Object> selectBoardList(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -66,6 +68,10 @@ public class BoardController {
 
     return map;
   }
+
+
+
+
 
   /**
    * 게시글 상세 조회
