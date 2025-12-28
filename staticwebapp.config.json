@@ -1,8 +1,0 @@
-{
-  "routes": [
-    {
-      "route": "/api/*",
-      "rewrite": "https://asp01-f4hvd6dccpbawhr.koreacentral-01.azurewebsites.net/*"
-    }
-  ]
-}
