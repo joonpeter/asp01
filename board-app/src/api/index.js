@@ -16,7 +16,8 @@ instance.defaults.headers.post['Access-Control-Allow-Origin'] = '*'
  * @param {*} params
  */
 function getBoardListAPI(params) {
-	return instance.get('/board/list', params)
+	//return instance.get('/board/list', params)
+	return instance.get('/board/list', { params })  // 🔧 이렇게 수정
 }
 
 /**
