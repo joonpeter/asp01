@@ -37,6 +37,15 @@ public class BoardController {
    * @throws Exception
    */
 
+  //yjsohn
+  @GetMapping("/list")
+  public List<Map<String, Object>> getBoardList() {
+  Map<String, Object> dummy = new HashMap<>();
+  dummy.put("id", 1);
+  dummy.put("title", "테스트 게시물");
+  return List.of(dummy);
+}
+
 
   @ResponseBody
   @GetMapping(value="/list")
