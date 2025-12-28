@@ -34,10 +34,17 @@
                         </choose>
                       </if>
                     </where>
-                    ORDER BY
-                    <foreach collection="sort" item="sort" index="index" separator=",">
-                      ${sort}
-                    </foreach>
+                    <choose>
+                      <when test="sort != null and sort.length > 0">
+                        ORDER BY
+                        <foreach collection="sort" item="sort" separator=",">
+                          ${sort}
+                        </foreach>
+                      </when>
+                      <otherwise>
+                        ORDER BY A.DOC_NO DESC
+                      </otherwise>
+                    </choose>
                     ) A, (SELECT @ROWNUM := 0) TEMP
             ) A
      WHERE ROWNUM BETWEEN #{startNo} AND #{endNo}
